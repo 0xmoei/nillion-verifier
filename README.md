@@ -107,7 +107,7 @@ docker stop CONTAINER_ID && docker rm CONTAINER_ID
 
 Change RPC (after stop and remove old verifier)
 ```
-docker run -d -v ./nillion/accuser:/var/tmp nillion/retailtoken-accuser:latest accuse --rpc-endpoint "https://testnet-nillion-rpc.lavenderfive.com" --block-start 5309742
+docker run -d -v ./nillion/accuser:/var/tmp nillion/retailtoken-accuser:latest accuse --rpc-endpoint "https://nillion-testnet-rpc.polkachu.com/" --block-start 5309742
 ```
 
 
