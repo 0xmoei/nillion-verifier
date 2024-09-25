@@ -44,7 +44,7 @@ mkdir -p nillion/accuser
 
 3- Initialize verifier
 ```
-docker run -v ./nillion/accuser:/var/tmp nillion/retailtoken-accuser:latest initialise
+docker run -v ./nillion/verifier:/var/tmp nillion/verifier:v1.0.1 initialise
 ```
 This will output the details needed to register the accuser on the website, save them:
 * accound_id: Nillion address of the accuser
@@ -61,7 +61,7 @@ cat nillion/accuser/credentials.json
 
 ## Run verifier accuser
 ```
-docker run -d -v ./nillion/accuser:/var/tmp nillion/retailtoken-accuser:latest accuse --rpc-endpoint "https://nillion-testnet.rpc.kjnodes.com" --block-start 5309742
+docker run -v ./nillion/verifier:/var/tmp nillion/verifier:v1.0.0 verify --rpc-endpoint "https://testnet-nillion-rpc.lavenderfive.com"
 ```
 
 
@@ -84,13 +84,16 @@ docker ps
 
 **2- Check your latest verified secrets, Replace `CONTAINER_ID` with yours**
 ```
-docker logs -f -n 10 CONTAINER_ID
+docker logs -f -n 100 CONTAINER_ID
 ```
 * the amount must inscreases
 * Registered must be `true`
 
 ![Screenshot_241](https://github.com/user-attachments/assets/7121acd6-04ae-445a-b1e5-15fdb63fb6f7)
 
+## Backup Node
+* Take a backup of `nillion/accuser/credentials.json` file
+* Or Save the entire `nillion` folder in your PC
 
 
 ## Usfeull commands: if you get into any error during the verifier running
@@ -104,10 +107,6 @@ Stop & remove Container
 ```
 docker stop CONTAINER_ID && docker rm CONTAINER_ID
 ```
-
-Change RPC (after stop and remove old verifier)
-```
-docker run -d -v ./nillion/accuser:/var/tmp nillion/retailtoken-accuser:latest accuse --rpc-endpoint "https://nillion-testnet-rpc.polkachu.com/" --block-start 5309742
-```
+> Run it Again using Run Verifier command
 
 
