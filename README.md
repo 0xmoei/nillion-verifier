@@ -34,7 +34,7 @@ docker --version
 ## Install verifier
 1- Pull docker images
 ```
-docker pull nillion/retailtoken-accuser:latest
+docker pull nillion/verifier:v1.0.1
 ```
 
 2- Create folder
