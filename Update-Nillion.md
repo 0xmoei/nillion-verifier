@@ -6,7 +6,7 @@ Copy Container ID of `nillion/verifier`
 docker ps
 ```
 
-## Kill Currect Verifier
+## Kill Current Verifier
 Replace `CONTAINER_ID`
 ```
 docker stop CONTAINER_ID
