@@ -95,6 +95,12 @@ docker logs -f -n 100 CONTAINER_ID
 * Take a backup of `nillion/accuser/credentials.json` file
 * Or Save the entire `nillion` folder in your PC
 
+## Stake ETH on Verifier (Anti Sybil)
+> You must stake a minimum amount of 0.05 ETH on your Verifier for their Anti sybil mechanism
+> Team stated not mandatory but I think it is important
+
+![image](https://github.com/user-attachments/assets/0880ba25-8bf0-4b1a-87d8-bbf4b1327faa)
+
 
 ## Usfeull commands: if you get into any error during the verifier running
 
