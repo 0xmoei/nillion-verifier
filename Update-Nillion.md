@@ -15,7 +15,7 @@ docker rm CONTAINER_ID
 
 ## Start Verifier Again
 ```bash
-docker run -d -v ./nillion/accuser:/var/tmp nillion/verifier:v1.0.1 verify --rpc-endpoint "https://testnet-nillion-rpc.lavenderfive.com"
+docker run -d -v ./nillion/accuser:/var/tmp nillion/verifier:v1.0.1 verify --rpc-endpoint "https://nillion-testnet-rpc.polkachu.com"
 ```
 > Now check your logs
 
