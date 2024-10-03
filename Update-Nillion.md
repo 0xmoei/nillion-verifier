@@ -13,9 +13,16 @@ docker stop CONTAINER_ID
 docker rm CONTAINER_ID
 ```
 
+## Transfer Accuser firectory contents to Verifier contents
+```
+cd $HOME
+mkdir -p nillion/verifier
+cp -r nillion/accuser/* nillion/verifier/
+```
+
 ## Start Verifier Again
 ```bash
-docker run -d -v ./nillion/accuser:/var/tmp nillion/verifier:v1.0.1 verify --rpc-endpoint "https://nillion-testnet-rpc.polkachu.com"
+docker run -v ./nillion/verifier:/var/tmp nillion/verifier:v1.0.1 verify --rpc-endpoint "https://testnet-nillion-rpc.lavenderfive.com"
 ```
 > Now check your logs
 
