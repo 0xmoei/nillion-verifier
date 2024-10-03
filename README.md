@@ -39,7 +39,7 @@ docker pull nillion/verifier:v1.0.1
 
 2- Create folder
 ```
-mkdir -p nillion/accuser
+mkdir -p nillion/verifier
 ```
 
 3- Initialize verifier
