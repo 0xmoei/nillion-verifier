@@ -13,7 +13,7 @@ docker stop CONTAINER_ID
 docker rm CONTAINER_ID
 ```
 
-## Transfer Accuser firectory contents to Verifier contents
+## Transfer Accuser contents to Verifier
 ```
 cd $HOME
 mkdir -p nillion/verifier
