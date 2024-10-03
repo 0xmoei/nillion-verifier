@@ -42,7 +42,7 @@ docker pull nillion/verifier:v1.0.1
 mkdir -p nillion/verifier
 ```
 
-3- Initialize verifier
+3- Initialize Verifier
 ```
 docker run -v ./nillion/verifier:/var/tmp nillion/verifier:v1.0.1 initialise
 ```
@@ -59,9 +59,9 @@ cat nillion/accuser/credentials.json
 
 5- Send some $NIL to verifier accuser address or get [faucet](https://faucet.testnet.nillion.com/) for it
 
-## Run verifier accuser
+## Run Verifier
 ```
-docker run -v ./nillion/verifier:/var/tmp nillion/verifier:v1.0.1 verify --rpc-endpoint "https://testnet-nillion-rpc.lavenderfive.com"
+docker run -d -v ./nillion/verifier:/var/tmp nillion/verifier:v1.0.1 verify --rpc-endpoint "https://testnet-nillion-rpc.lavenderfive.com"
 ```
 
 
