@@ -46,7 +46,7 @@ mkdir -p nillion/verifier
 ```
 docker run -v ./nillion/verifier:/var/tmp nillion/verifier:v1.0.1 initialise
 ```
-This will output the details needed to register the accuser on the website, save them:
+This will output the details needed to register the verifier on the website, save them:
 * accound_id: Nillion address of the accuser
 * public_key: Public Key of the accuser
 * Note The accuser will store the credentials in a file called `credentials.json` in the folder that was created. If you lose this file, you will lose access to the keys/address of the accuser
@@ -54,7 +54,7 @@ This will output the details needed to register the accuser on the website, save
 
 4- Check `credential.json` file contents
 ```
-cat nillion/accuser/credentials.json
+cat nillion/verifier/credentials.json
 ```
 
 5- Send some $NIL to verifier accuser address or get [faucet](https://faucet.testnet.nillion.com/) for it
@@ -92,7 +92,7 @@ docker logs -f -n 100 CONTAINER_ID
 ![Screenshot_241](https://github.com/user-attachments/assets/7121acd6-04ae-445a-b1e5-15fdb63fb6f7)
 
 ## Backup Node
-* Take a backup of `nillion/accuser/credentials.json` file
+* Take a backup of `nillion/verifier/credentials.json` file
 * Or Save the entire `nillion` folder in your PC
 
 ## Stake ETH on Verifier (Anti Sybil)
